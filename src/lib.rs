@@ -216,6 +216,12 @@ impl Into<d128> for Price4 {
     }
 }
 
+impl Into<u32> for Price4 {
+    fn into(self) -> u32 {
+        self.0
+    }
+}
+
 impl From<u32> for Price4 {
     fn from(v: u32) -> Price4 {
         Price4(v)
@@ -232,11 +238,20 @@ impl Into<d128> for Price8 {
     }
 }
 
+impl Into<u64> for Price8 {
+    fn into(self) -> u64 {
+        self.0
+    }
+}
+
 impl From<u64> for Price8 {
     fn from(v: u64) -> Price8 {
         Price8(v)
     }
 }
+
+
+
 named!(
     char2bool<bool>,
     alt!(
