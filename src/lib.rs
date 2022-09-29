@@ -216,8 +216,8 @@ impl Into<d128> for Price4 {
     }
 }
 
-impl Into<u32> for Price4 {
-    fn into(self) -> u32 {
+impl Price4 {
+    pub fn inner(self) -> u32 {
         self.0
     }
 }
